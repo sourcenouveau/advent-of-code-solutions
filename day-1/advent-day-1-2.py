@@ -1,5 +1,5 @@
 # Advent of Code Solutions: Day 1, part 2
-# http://github.com/emddudley/advent-of-code-solutions
+# https://github.com/emddudley/advent-of-code-solutions
 
 with open('input', 'r') as input:
     instructions = input.read()
