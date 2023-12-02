@@ -1,5 +1,5 @@
 """
-Part Two
+Day 1: Trebuchet?! --- Part Two
 https://adventofcode.com/2023/day/1
 """
 
