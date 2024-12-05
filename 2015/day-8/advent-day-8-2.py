@@ -4,9 +4,9 @@
 code = 0
 enc = 0
 
-with open('input', 'r') as f:
+with open("input", "r") as f:
     for line in f:
         code += len(line) - 1
-        enc += len(line) - 1 + 2 + line.count("\"") + line.count("\\")
+        enc += len(line) - 1 + 2 + line.count('"') + line.count("\\")
 
 print(enc - code)

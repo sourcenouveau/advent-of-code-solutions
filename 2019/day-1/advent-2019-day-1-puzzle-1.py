@@ -8,7 +8,7 @@ def fuel(mass: int) -> int:
 
 total_fuel = 0
 
-with open('input', 'r') as f:
+with open("input", "r") as f:
     for line in f:
         mass = int(line)
         total_fuel += fuel(mass)

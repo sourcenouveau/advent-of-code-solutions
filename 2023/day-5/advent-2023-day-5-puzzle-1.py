@@ -9,7 +9,7 @@ def lookup(src_val, dst_map):
 
     for dst_start, src_start, src_len in dst_map:
         if src_start <= src_val < src_start + src_len:
-             dst_val = dst_start + (src_val - src_start)
+            dst_val = dst_start + (src_val - src_start)
 
     return dst_val
 
@@ -28,11 +28,11 @@ def main():
                 continue
 
             if line.startswith("seeds: "):
-                seeds = tuple(int(s) for s in line[len("seeds: "):].split(" "))
+                seeds = tuple(int(s) for s in line[len("seeds: ") :].split(" "))
                 continue
 
             if line.endswith(" map:"):
-                map_from, map_to = line[:-len(" map:")].split("-to-")
+                map_from, map_to = line[: -len(" map:")].split("-to-")
                 maps[map_to] = []
                 next_maps[map_from] = map_to
                 continue

@@ -52,7 +52,7 @@ def main():
 
     for row, line in enumerate(schematic):
         col_start = 0
-        num_str = ''
+        num_str = ""
 
         for col, char in enumerate(line):
             if char.isdigit():
@@ -64,7 +64,7 @@ def main():
                 if num_str:
                     numbers.append(SchematicNumber(num_str, row, col_start))
 
-                num_str = ''
+                num_str = ""
 
         if num_str:
             numbers.append(SchematicNumber(num_str, row, col_start))

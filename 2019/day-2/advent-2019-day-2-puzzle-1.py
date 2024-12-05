@@ -2,8 +2,8 @@
 # https://github.com/emddudley/advent-of-code-solutions
 
 
-with open('input', 'r') as f:
-    program = [int(x) for x in f.read().strip().split(',')]
+with open("input", "r") as f:
+    program = [int(x) for x in f.read().strip().split(",")]
 
 program[1] = 12
 program[2] = 2

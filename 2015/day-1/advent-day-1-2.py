@@ -1,7 +1,7 @@
 # Advent of Code Solutions: Day 1, part 2
 # https://github.com/emddudley/advent-of-code-solutions
 
-with open('input', 'r') as input:
+with open("input", "r") as input:
     instructions = input.read()
 
 floor = 0
@@ -11,9 +11,9 @@ underground = False
 for instruction in instructions:
     position += 1
 
-    if instruction == '(':
+    if instruction == "(":
         floor += 1
-    elif instruction == ')':
+    elif instruction == ")":
         floor -= 1
 
     if floor < 0:

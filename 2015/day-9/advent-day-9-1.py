@@ -5,9 +5,9 @@ import itertools
 
 distances = {}
 
-with open('input', 'r') as f:
+with open("input", "r") as f:
     for line in f:
-        tokens = line.split(' ')
+        tokens = line.split(" ")
         fromloc = tokens[0]
         toloc = tokens[2]
         distance = tokens[4]

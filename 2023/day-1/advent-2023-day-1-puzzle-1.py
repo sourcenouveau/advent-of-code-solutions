@@ -3,6 +3,7 @@ Day 1: Trebuchet?! --- Part One
 https://adventofcode.com/2023/day/1
 """
 
+
 def main():
     cal_sum = 0
 

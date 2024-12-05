@@ -1,7 +1,7 @@
 # Advent of Code Solutions: Day 3, part 1
 # https://github.com/emddudley/advent-of-code-solutions
 
-with open('input', 'r') as input:
+with open("input", "r") as input:
     directions = input.read()
 
 houses = {}
@@ -13,13 +13,13 @@ for direction in directions:
 
     houses[str(current)] += 1
 
-    if direction == '^':
+    if direction == "^":
         current[1] += 1
-    elif direction == '>':
+    elif direction == ">":
         current[0] += 1
-    elif direction == 'v':
+    elif direction == "v":
         current[1] -= 1
-    elif direction == '<':
+    elif direction == "<":
         current[0] -= 1
     else:
         print("Error parsing direction '%s'" % direction)

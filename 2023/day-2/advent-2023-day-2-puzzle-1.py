@@ -3,6 +3,7 @@ Day 2: Cube Conundrum --- Part One
 https://adventofcode.com/2023/day/2
 """
 
+
 def main():
     bag = {
         "red": 12,
@@ -27,13 +28,13 @@ def main():
                     if int(count) > bag[color_name]:
                         impossible = True
                         break
-                
+
                 if impossible:
                     break
-            
+
             if not impossible:
                 id_sum += game_id
-        
+
     print(id_sum)
 
 

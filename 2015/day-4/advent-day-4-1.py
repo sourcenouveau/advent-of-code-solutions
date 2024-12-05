@@ -3,14 +3,15 @@
 
 import hashlib
 
-with open('input', 'r') as input:
+with open("input", "r") as input:
     secret = input.read()
 
 answer = 1
 
 while True:
     digest = hashlib.md5(secret + str(answer)).hexdigest()
-    if digest[0:5] == '00000': break
+    if digest[0:5] == "00000":
+        break
     answer += 1
 
 print(answer)

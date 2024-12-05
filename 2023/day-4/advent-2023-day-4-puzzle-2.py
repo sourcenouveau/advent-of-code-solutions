@@ -10,10 +10,12 @@ def main():
     with open("input") as f:
         for line in f:
             winning, have = line.strip().split(":")[1].split("|")
-            cards.append((
-                tuple(int(w) for w in winning.split(" ") if w),
-                tuple(int(h) for h in have.split(" ") if h)
-            ))
+            cards.append(
+                (
+                    tuple(int(w) for w in winning.split(" ") if w),
+                    tuple(int(h) for h in have.split(" ") if h),
+                )
+            )
 
     copy_counts = [1] * len(cards)
 

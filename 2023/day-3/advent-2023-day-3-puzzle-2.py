@@ -20,7 +20,7 @@ def main():
 
     for row, line in enumerate(schematic):
         col_start = 0
-        num_str = ''
+        num_str = ""
 
         for col, char in enumerate(line):
             if char.isdigit():
@@ -32,7 +32,7 @@ def main():
                 if num_str:
                     numbers.append(SchematicNumber(num_str, row, col_start))
 
-                num_str = ''
+                num_str = ""
 
         if num_str:
             numbers.append(SchematicNumber(num_str, row, col_start))
@@ -55,7 +55,9 @@ def main():
                     for number in numbers_by_row[check_row]:
                         if (
                             col - 1 <= number.col_start <= col + 1
-                            or col - 1 <= number.col_start + len(number.num_str) - 1 <= col + 1
+                            or col - 1
+                            <= number.col_start + len(number.num_str) - 1
+                            <= col + 1
                         ):
                             adjacent.append(number)
 
@@ -73,12 +75,16 @@ def main():
                     for number in numbers_by_row[check_row]:
                         if (
                             col - 1 <= number.col_start <= col + 1
-                            or col - 1 <= number.col_start + len(number.num_str) - 1 <= col + 1
+                            or col - 1
+                            <= number.col_start + len(number.num_str) - 1
+                            <= col + 1
                         ):
                             adjacent.append(number)
 
                 if len(adjacent) == 2:
-                    gear_ratio_sum += int(adjacent[0].num_str) * int(adjacent[1].num_str)
+                    gear_ratio_sum += int(adjacent[0].num_str) * int(
+                        adjacent[1].num_str
+                    )
 
     print(gear_ratio_sum)
 
