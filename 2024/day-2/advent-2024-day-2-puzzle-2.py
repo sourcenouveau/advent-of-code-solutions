@@ -4,7 +4,6 @@ https://adventofcode.com/2024/day/2
 """
 
 import operator
-from itertools import pairwise
 
 
 def main():
