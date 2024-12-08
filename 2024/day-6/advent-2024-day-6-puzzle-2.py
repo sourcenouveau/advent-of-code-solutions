@@ -27,7 +27,7 @@ def next_look_row_col(guard_row, guard_col, guard_dir):
         next_col = guard_col - 1
     else:
         raise Exception(f"unknown guard direction {guard_dir}")
-    
+
     return next_row, next_col
 
 
@@ -55,12 +55,14 @@ def explore(guard_row, guard_col, guard_dir, lab_map):
         current = (guard_row, guard_col, guard_dir)
 
         if current in explored:
-            return 'loop'
+            return "loop"
 
         explored.add(current)
-        guard_row, guard_col, guard_dir = guard_next(guard_row, guard_col, guard_dir, lab_map)
+        guard_row, guard_col, guard_dir = guard_next(
+            guard_row, guard_col, guard_dir, lab_map
+        )
 
-    return 'exit'
+    return "exit"
 
 
 def main():
@@ -97,12 +99,14 @@ def main():
             if prev_item != "#":
                 lab_map[obs_row][obs_col] = "#"
 
-                if explore(guard_row, guard_col, guard_dir, lab_map) == 'loop':
+                if explore(guard_row, guard_col, guard_dir, lab_map) == "loop":
                     obstructions.add((obs_row, obs_col))
 
                 lab_map[obs_row][obs_col] = prev_item
 
-        guard_row, guard_col, guard_dir = guard_next(guard_row, guard_col, guard_dir, lab_map)
+        guard_row, guard_col, guard_dir = guard_next(
+            guard_row, guard_col, guard_dir, lab_map
+        )
 
     print(len(obstructions))
 
@@ -111,4 +115,4 @@ if __name__ == "__main__":
     start = time.time()
     main()
     end = time.time()
-    print(f'Took {round(end - start, 1)} seconds')
+    print(f"Took {round(end - start, 1)} seconds")
