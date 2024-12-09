@@ -23,7 +23,7 @@ def main():
         values = tuple(int(v) for v in values.split(" "))
 
         for ops in itertools.product(
-            [operator.add, operator.mul, concat], repeat=len(values)
+            [operator.add, operator.mul, concat], repeat=len(values) - 1
         ):
             values_iter = iter(values)
             result = next(values_iter)

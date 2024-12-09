@@ -18,7 +18,9 @@ def main():
         expected = int(expected)
         values = tuple(int(v) for v in values.split(" "))
 
-        for ops in itertools.product([operator.add, operator.mul], repeat=len(values)):
+        for ops in itertools.product(
+            [operator.add, operator.mul], repeat=len(values) - 1
+        ):
             values_iter = iter(values)
             result = next(values_iter)
 
