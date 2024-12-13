@@ -18,10 +18,10 @@ def main():
     for row in range(map_rows):
         for col in range(map_cols):
             frequency = antenna_map[row][col]
-            
+
             if not frequency.isalnum():
                 continue
-            
+
             if frequency not in antennas:
                 antennas[frequency] = []
 
@@ -38,7 +38,7 @@ def main():
 
             if 0 <= antinode_row < map_rows and 0 <= antinode_col < map_cols:
                 antinodes.add((antinode_row, antinode_col))
-    
+
     print(len(antinodes))
 
 

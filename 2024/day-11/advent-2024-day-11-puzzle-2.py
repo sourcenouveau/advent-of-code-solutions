@@ -49,11 +49,13 @@ def main():
         if not blink_map:
             blink_stones = stones
         else:
-            blink_stones = list(set(s for l in blink_map.values() for s in l if s not in blink_map))
+            blink_stones = list(
+                set(s for l in blink_map.values() for s in l if s not in blink_map)
+            )
 
         for blink_stone in blink_stones:
             blinking = [blink_stone]
-            
+
             for _ in range(25):
                 blinking = blink_all(blinking)
 

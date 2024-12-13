@@ -26,7 +26,7 @@ def main():
     while file_end >= 0:
         while file_end >= 0 and disk[file_end] == -1:
             file_end -= 1
-        
+
         file_start = file_end
 
         while file_start >= 0:

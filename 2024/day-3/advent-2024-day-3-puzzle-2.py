@@ -8,13 +8,13 @@ import re
 
 def main():
     with open("input") as f:
-        memory = ''.join(f.readlines())
+        memory = "".join(f.readlines())
 
     result = 0
     active = True
 
     for p in range(len(memory)):
-        window = memory[p:p + 20]
+        window = memory[p : p + 20]
 
         if window.startswith("do()"):
             active = True
